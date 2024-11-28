@@ -28,6 +28,7 @@ Please contact Banglei Guan <guanbanglei12@nudt.edu.cn> or any of the other auth
 ```
 docker build  -t lopet:R2024b .
 ```
+If you would like to modify Toolboxes, you can follow this [procedure](https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/alternates/building-on-matlab-docker-image#build-an-image-with-license-server-information)
 
 ## Run docker container with docker-compose
 ```
