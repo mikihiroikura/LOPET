@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  matlab:
+    image: lopet:R2024b
+    container_name: lopet
+    ports:
+      - "8888:8888"  # port mapping
+    shm_size: "512M"  # shared memory size
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/home/matlab/LOPET
+    command: -browser # open matlab on browser

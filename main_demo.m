@@ -36,7 +36,7 @@ j=1;
 
 for i=1:200
 
-    event_window_name=['.\events\',num2str(i),'.mat'];
+    event_window_name=['./events/',num2str(i),'.mat'];
     load(event_window_name);
 
     p_cur=K*pose_cur*X_W;
@@ -47,7 +47,7 @@ for i=1:200
     [pose_cur] =pose_optim(event_cluster, pose_cur(1:3,1:3),pose_cur(1:3,4),K,X_W);
     time_m(j,1)=toc;
 
-    [repro_Image]=reproj_show(K,pose_cur,event_cur0,X_W);
+    [repro_Image]=reproj_show(K,pose_cur,event_cur,X_W);
     imshow(repro_Image);
     j=j+1;
 
