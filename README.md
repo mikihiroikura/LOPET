@@ -24,4 +24,20 @@ Line-based 6-DoF Object Pose Estimation and Tracking With an Event Camera
 Please contact Zibin Liu <liuzibin19@nudt.edu.cn> to obtain the dataset for academic purposes. 
 Please contact Banglei Guan <guanbanglei12@nudt.edu.cn> or any of the other authors for any inquiries or requests.
 
+## Build docker environment
+```
+docker build  -t lopet:R2024b .
+```
+If you would like to modify Toolboxes, you can follow this [procedure](https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/alternates/building-on-matlab-docker-image#build-an-image-with-license-server-information)
 
+## Run docker container with docker-compose
+```
+docker compose up -d
+```
+
+## How to run `main_demo.m`
+1. Run docker container
+2. You can open browser and open this [Localhost URL](http://localhost:8888/index.html)
+3. Go to LOPET directory
+4. Unzip `events.zip`
+5. Run `main_demo.m`
